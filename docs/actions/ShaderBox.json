@@ -1,0 +1,19 @@
+[{
+    "linearForce": {
+        "x": 10.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "angularForce": {
+        "x": 0.0,
+        "y": 10.0,
+        "z": 0.0
+    },
+    "text": {
+        "title": "Interaction test...",
+        "timeout": 15000,
+        "content": "<p>The box you just clicked should've moved and also you should be now hearing some odd radio test sound...</p><p>Lorem ipsum dolor sit amet, his dictas tamquam facilisis ad, ad sea zril nonumy, est ne nullam aperiam feugiat. Bonorum disputando ex qui, appareat eleifend vel te. Id his consetetur ullamcorper, sed quod putant nonumes ad. Ut deleniti interpretaris mei, ne delicata periculis cum, pro ex ignota iisque. Liber putant an usu.</p><p>Ex eripuit admodum lucilius sea, ea has putent fuisset, at quo ferri indoctum. Eu ferri falli eam. Qui ut sensibus mandamus inciderint, idque zril clita pro ex, inani reformidans liberavisse per at. In vix deleniti suscipit, cu qui tota antiopam, salutandi omittantur pro ne.</p><p>Ex impedit detraxit mediocrem pro, eam id veniam fastidii vituperata, quo at omnis solet malorum. Feugait tractatos accommodare sea ut, wisi tantas definitiones eos ea. Aperiam principes vis cu, et soleat blandit salutandi pri. Sed te ponderum apeirian lucilius. In est natum velit expetendis, mel ut wisi accusam cotidieque. Quis assum saepe cum cu. Utamur comprehensam no sea, te purto eros recteque eam, cu unum habeo illum sea.</p>"
+    },
+    "sound": "sounds/odd_radio.mp3",
+    "event": "interact"
+}]
