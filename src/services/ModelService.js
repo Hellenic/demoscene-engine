@@ -1,4 +1,5 @@
-"use strict";
+'use strict';
+
 var ModelService = {};
 
 /**
@@ -10,21 +11,6 @@ var ModelService = {};
 
     var models = [];
     var loader = new THREE.JSONLoader();
-
-
-    Service.getFilename = function(file)
-    {
-        var filename = file;
-        if (filename.indexOf("/") >= 0)
-        {
-            filename = filename.substring(filename.lastIndexOf("/")+1);
-        }
-
-        if (filename.indexOf(".") < 0)
-            return filename;
-
-        return filename.substring(0, filename.lastIndexOf("."));
-    }
 
     Service.load = function(model, callback)
     {
@@ -39,9 +25,7 @@ var ModelService = {};
                 loader.load(file, function(mesh, materials) {
                     currentCount++;
 
-                    // TODO DemoUtils
-                    //var fileName = DemoUtils.getFilename(file);
-                    var filename = Service.getFilename(file);
+                    var fileName = DemoUtils.getFilename(file);
 
                     // Optional callback to "onFileLoaded" where File is the name of the file
                     // e.g. file: BirdModel.json => callback: onBirdModelLoaded

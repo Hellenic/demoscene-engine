@@ -1,0 +1,33 @@
+#progress
+{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    padding: 5px;
+    padding-right: 8px;
+
+    border: 2px solid #F5F6F6;
+    border-radius: 5px;
+}
+#progressbar
+{
+
+}
+.progress-file
+{
+
+}
+.progress-percent
+{
+
+}
+.progress-percent:after
+{
+    content: " %";
+}
+.progress-width
+{
+    border: 2px solid #B8BAC6;
+    border-radius: 25px;
+    background-color: #F5F6F6;
+}

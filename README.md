@@ -62,6 +62,10 @@ $ npm install
  * [#babel-starter-kit](https://gitter.im/kriasoft/babel-starter-kit) on Gitter
  * [@koistya](https://www.codementor.io/koistya) on Codementor
 
+### Notes and TODOs
+ * System.js didn't work out-of-the-box. index.js needed a change on line 2
+ ** From require('when/es6-shim/Promise'); to require('when/es6-shim/Promise.browserify-es6');
+
 ### Based on
  * Babel Starter Kit | https://github.com/kriasoft/babel-starter-kit
  * Copyright (c) Konstantin Tarkus <hello@tarkus.me> | The MIT License

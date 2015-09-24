@@ -1,4 +1,10 @@
 @import './variables.css';
+/* TODO These should be in engine itself, not here. Somehow overridable */
+@import './demoscene.css';
+
+/* TODO Would be great to load these only when the module is activated */
+@import './stats.css';
+@import './progress.css';
 
 body {
     padding-top: 20px;
@@ -7,7 +13,10 @@ body {
 .demo-wrapper {
     border: 1px grey dashed;
     min-height: 100px;
+    min-width: 100px;
     border-radius: 25px;
+    padding: 5px;
+    text-align: center;
 }
 #demoscreen {
 

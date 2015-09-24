@@ -1,6 +1,7 @@
 'use strict';
 
-import DemoUtils from './utils/DemoUtils';
+import Utils from './core/LoaderUtils';
+import Progress from './core/Progress';
 
 /**
 * DemoLoader is a loader for DemoScene system. Loader will load the actual DemoScene system
@@ -8,7 +9,7 @@ import DemoUtils from './utils/DemoUtils';
 * the DemoScene system.
 *
 * TODO Finish ES6 transform
-* TODO Use https://babeljs.io/docs/learn-es2015/#module-loaders?
+* TODO Use https://babeljs.io/docs/learn-es2015/#module-loaders or some other system to dynamically load modules
 */
 class DemoLoader {
 
@@ -17,6 +18,8 @@ class DemoLoader {
         this.initialScripts = [];
         this.scripts = [];
         this.initialsLoaded = false;
+
+        this.progress = new Progress();
     }
 
     addScripts(scripts, initial, callback)
@@ -56,7 +59,7 @@ class DemoLoader {
 
         $(document).trigger("loaderTick.DemoSystem", {name: scriptObject.name, file: scriptObject.file});
 
-        var $loader = DemoUtils.getLoader(scriptObject.file);
+        var $loader = Utils.getLoader(scriptObject.file);
         var thisRef = this;
 
         // Load the script
@@ -121,7 +124,7 @@ class DemoLoader {
         }
         else
         {
-            name = DemoUtils.getFilename(scriptData);
+            name = Utils.getFilename(scriptData);
             file = scriptData;
         }
 

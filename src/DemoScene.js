@@ -16,7 +16,8 @@ class DemoScene {
         this.loader = new DemoLoader();
 
         this.started = false;
-        this.settings = {};
+        this.settings = config;
+        this.applySettings();
 
         // Root path of the DemoSystem
         this.ROOT_PATH = path;
@@ -44,13 +45,9 @@ class DemoScene {
         this.loader.addScript(this.ROOT_PATH + "controllers/TriggerController.js", true);
         this.loader.addScript(this.ROOT_PATH + "controllers/DialogController.js", true);
         this.loader.addScript(this.ROOT_PATH + "controllers/EventController.js", true);
+        this.loader.addScript(this.ROOT_PATH + "utils/DemoUtils.js", true);
         this.loader.addScript(this.ROOT_PATH + "utils/Statics.js", true);
         this.loader.addScript(this.ROOT_PATH + "utils/Support.js", true);
-
-        if (config)
-        {
-            this.setProperties(config);
-        }
     }
 
     /**
@@ -80,19 +77,21 @@ class DemoScene {
             console.warn("You cannot set properties anymore after the DemoScene engine has been started.");
             return;
         }
-        this.settings = config;
 
-        if (this.settings.stats)
-        {
-            this.loader.addScript(this.ROOT_PATH + "lib/Stats.js", true);
-        }
+        // Merge existing settings and given config
+        this.settings = Object.assign(config, this.settings);
+        this.applySettings();
+    }
+
+    applySettings()
+    {
         if (this.settings.controls)
         {
-            this.loader.addScript(this.ROOT_PATH + "extend/Controls.js", true);
+            this.loader.addScript(this.ROOT_PATH + "modules/CharacterControls.js", true);
         }
         if (this.settings.pointerlock)
         {
-            this.loader.addScript(this.ROOT_PATH + "extend/Pointerlock.js",true);
+            this.loader.addScript(this.ROOT_PATH + "modules/Pointerlock.js",true);
         }
         if (this.settings.audio)
         {
@@ -109,9 +108,10 @@ class DemoScene {
 
     addScene(sceneConfig)
     {
-        this.loader.addScripts(sceneConfig.shaders, sceneConfig.initial, this.shaderCallback);
-        this.loader.addScripts(sceneConfig.models, sceneConfig.initial, this.modelCallback);
-        this.loader.addScript(sceneConfig.scene, sceneConfig.initial);
+        var initial = sceneConfig.initial;
+        this.loader.addScripts(sceneConfig.shaders, initial, this.shaderCallback);
+        this.loader.addScripts(sceneConfig.models, initial, this.modelCallback);
+        this.loader.addScript(sceneConfig.scene, initial);
     }
 
     start()

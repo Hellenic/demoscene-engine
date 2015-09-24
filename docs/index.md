@@ -1,5 +1,5 @@
 ---
-title: Demoscene Starter Kit
+title: WebGL Demoscene Engine
 ---
 
 # Demoscene Starter Kit

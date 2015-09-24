@@ -7,7 +7,9 @@ Example.init = function()
 	this.createScene();
 
 	// Make the controls and add the object (character) to scene
-	this.camera = new THREE.PerspectiveCamera(80, Statics.SCREEN_WIDTH / Statics.SCREEN_HEIGHT, 1, 1000);
+	// this.camera = new THREE.PerspectiveCamera(80, Statics.SCREEN_WIDTH / Statics.SCREEN_HEIGHT, 1, 1000);
+	this.camera = new THREE.PerspectiveCamera(80, 400 / 300, 1, 1000);
+
 	//this.controls = new CharacterControls(this.camera, Character.getMesh(), this.scene);
 	//this.scene.add(this.controls.getObject());
 
@@ -38,7 +40,8 @@ Example.init = function()
 	this.renderer.setPixelRatio(window.devicePixelRatio);
 	this.renderer.autoClear = true;
 	this.renderer.sortObjects = false;
-	this.renderer.setSize(Statics.SCREEN_WIDTH, Statics.SCREEN_HEIGHT);
+	//this.renderer.setSize(Statics.SCREEN_WIDTH, Statics.SCREEN_HEIGHT);
+	this.renderer.setSize(400, 300);
 	this.renderer.shadowMapEnabled = true;
 	this.renderer.shadowMapType = THREE.PCFSoftShadowMap;
 

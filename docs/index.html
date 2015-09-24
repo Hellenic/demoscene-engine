@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><%- title %> - JavaScript Demoscene Engine</title>
+    <title><%- title %></title>
 
     <meta name="description" content="JavaScript Demoscene Engine is a...">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,22 +49,58 @@
     </div><!-- /.container -->
 
     <% if (url === '/') { %>
+    <!-- Demoscene Engine demonstrative content begins here -->
+
+        <!-- Module demonstration -->
+        <div class="container">
+
+            <!-- [Built-in] Notifications if browser doesn't support required features -->
+            <div id="support">
+                <p data-api="webgl">Your browser doesn't seem to support WebGL.</p>
+                <p data-api="pointerlock">Your browser doesn't seem to support Pointer Lock API.</p>
+
+                <noscript>
+                    You will need to enable your JavaScript in order to experience this.
+                    For further help you can visit: <a href="http://www.enable-javascript.com/">http://www.enable-javascript.com/</a>
+                </noscript>
+            </div>
+
+            <!-- [Built-in] Notifications sent by triggers and such -->
+            <div id="notification" class="float-content">
+                <h2></h2>
+                <p></p>
+            </div>
+
+            <!-- [Module: progress] Progress bar -->
+            <div id="progress">
+                <div id="progressbar">
+                    <div class="progress-file"></div>
+                    <div class="progress-percent">0</div>
+                    <div class="progress-width">&nbsp;</div>
+                </div>
+                <div data-state="before">Preparing to load...</div>
+                <div data-state="loading">Loading... Please wait.</div>
+                <div data-state="done" data-show="#instructions">Done loading.</div>
+            </div>
+        </div>
+
         <div class="container demo-wrapper">
+            <!-- Actual Demoscene canvas container -->
             <div id="demoscreen">
             </div>
         </div>
+
+    <!-- End of demo content -->
     <% } %>
 
     <div class="container">
         <%= body %>
     </div>
 
-    <!-- Demoscene Engine depends on jQuery, Modernizr and Three.JS -->
+    <!-- Demoscene Engine depends on jQuery, -Modernizr- and Three.JS -->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js"></script>
-
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>-->
 
     <script src="<%- root %>js/main.min.js"></script>
 

@@ -1,4 +1,5 @@
-"use strict";
+'use strict';
+
 var TriggerController = {};
 
 /**
@@ -22,9 +23,7 @@ var TriggerController = {};
         {
             // Check if the model is now visible on the screen
             var model = models[i];
-            // TODO ES6 DemoUtils
-            //var isOnScreen = DemoUtils.isOnCamera(model.getMesh(), camera);
-            var isOnScreen = false;
+            var isOnScreen = DemoUtils.isOnCamera(model.getMesh(), camera);
 
             // Model was hidden but is now shown
             if (isOnScreen && !model.isOnScreen)

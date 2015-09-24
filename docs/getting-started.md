@@ -1,5 +1,5 @@
 ---
-title: Getting Started ∙ Demoscene Starter Kit
+title: Getting Started ∙ WebGL Demoscene Engine
 ---
 
 # Getting Started

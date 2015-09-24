@@ -25,3 +25,9 @@ ShaderBox.getShaderMaterial = function()
 
     return shaderMaterial;
 };
+
+ShaderBox.animate = function()
+{
+    this.mesh.rotation.y += 0.01;
+    this.mesh.rotation.x += 0.02;
+};

@@ -1,0 +1,14 @@
+#support
+{
+    background: rgba(7, 31, 51, 0.7);
+    padding: 10px;
+    color: red;
+    z-index: 10;
+}
+
+#notification
+{
+    background: rgba(7, 31, 51, 0.7);
+    padding: 10px;
+    color: white;
+}

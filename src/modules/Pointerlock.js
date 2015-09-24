@@ -1,5 +1,5 @@
 "use strict";
-DemoScene.Pointerlock = {};
+var Pointerlock = {};
 
 /**
 * Pointerlock API handler
@@ -84,4 +84,4 @@ DemoScene.Pointerlock = {};
 
     $(document).on("loaderReady.DemoSystem", initialize)
 
-})(DemoScene.Pointerlock, jQuery);
+})(Pointerlock, jQuery);
