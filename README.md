@@ -55,23 +55,23 @@ Read more about the engine on my blog, [blog.blankpace.net](http://blog.blankpac
 
 # Getting Started
 
-#. Start by cloning this repo, e.g.
+1. Start by cloning this repo, e.g.
 ```shell
 $ git clone https://github.com/Hellenic/demoscene-engine
 $ cd demoscene-engine
 ```
 
-#. Install dependencies with
+2. Install dependencies with
 ```shell
 $ npm install
 ```
 
-#. Build changes with
+3. Build changes with
 ```shell
 $ npm run build
 ```
 
-#. Finally, start the example with the demoscene engine
+4. Finally, start the example with the demoscene engine
 ```shell
 $ npm run start
 ```
