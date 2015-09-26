@@ -1,38 +1,57 @@
 ---
-title: Getting Started ∙ WebGL Demoscene Engine
+title: Getting Started ∙ Demoscene Engine
 ---
 
 # Getting Started
 
-Start by cloning this repo and installing project dependencies:
-
+1. Start by cloning this repo, e.g.
 ```shell
-$ git clone -o babel-starter-kit -b master --single-branch https://github.com/kriasoft/babel-starter-kit.git MyProject
-$ cd MyProject
+$ git clone https://github.com/Hellenic/demoscene-engine
+$ cd demoscene-engine
+```
+
+2. Install dependencies with
+```shell
 $ npm install
 ```
 
-Update your name in `LICENSE.txt` and project information in `package.json` and
-`README.md` files. Write your code in `src` folder, write tests in `test`
-folder. Run `npm run build` to compile the source code into a distributable
-format. Write documentation in markdown format in `docs` folder. Run
-`npm start` to launch a development server with the documentation site.
+3. Build changes with
+```shell
+$ npm run build
+```
 
-## How to Test
+4. Finally, start the example with the demoscene engine
+```shell
+$ npm run start
+```
+
+## Building your own demo
+
+This project is mainly for building the engine itself but also comes with an
+example demo. You can start by modifying the examples in docs/ folder and to get
+familiar with the engine.
+
+Engine codes are located in `src` folder and the tests for it are in `test`
+folder. If you modify the code run `npm run build` to compile the source code
+into a distributable format and under the example in docs/.
+
+Write documentation in markdown format in `docs` folder. Run
+`npm run start` to launch a development server with the documentation site and
+the example demo.
+
+Update your name in `LICENSE.txt` and project information in `package.json` and
+`README.md` files.
+
+## Building your models for the demo
+
+I personally prefer Blender. In short, you can just model your models in Blender
+and export them with THREE.js Blender exporter, which will conver them to JSON
+files. These JSON files you include in your Model definition, which is then
+included in Scene definition.
+
+## How to test
 
 ```shell
 $ npm run lint          # Lint your code
 $ npm test              # Run unit tests, or `npm test -- --watch`
-```
-
-## How to Update
-
-Down the road you can fetch and merge the recent changes from this repo back
-into your project:
-
-```shell
-$ git checkout master
-$ git fetch babel-starter-kit
-$ git merge babel-starter-kit/master
-$ npm install
 ```
