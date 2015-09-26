@@ -63,12 +63,9 @@ const css = async (source, options) => {
 
 const js = async (options) => new Promise((resolve, reject) => {
   options = options || {}; // eslint-disable-line no-param-reassign
-  browserify('docs/js/main.js', {
-    debug: !!options.debug,
-    transform: [babelify],
-  }).bundle((err, buffer) =>
-    err ? reject(err) : resolve(buffer.toString('utf8'))
-  );
+  browserify(options.file, { debug: !!options.debug})
+    .transform(babelify)
+    .bundle((err, buffer) => err ? reject(err) : resolve(buffer.toString('utf8')));
 });
 
 export default { md, css, js };

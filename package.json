@@ -41,6 +41,6 @@
     "test": "mocha test --compilers js:babel/register",
     "build": "babel-node --eval \"require('./tools/build')().catch(err => console.error(err.stack))\"",
     "start": "babel-node tools/start",
-    "publish": "build && cd build && git init && git add --all . && git commit --amend --no-edit && git push origin gh-pages -f"
+    "publish": "build"
   }
 }
