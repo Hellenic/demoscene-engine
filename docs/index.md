@@ -2,7 +2,7 @@
 title: WebGL Demoscene Engine
 ---
 
-# Demoscene Starter Kit
+# WebGL Demoscene engine
 
 JavaScript library boilerplate, a project template for authoring and
 publishing JavaScript libraries built with [ES6+](http://babeljs.io/docs/learn-es2015/),
@@ -18,3 +18,9 @@ publishing JavaScript libraries built with [ES6+](http://babeljs.io/docs/learn-e
  * ✓ Project documentation boilerplate ([demo](http://www.kriasoft.com/babel-starter-kit/))<br>
  * ✓ [Yeoman](http://yeoman.io/) generator ([generator-javascript](https://github.com/kriasoft/babel-starter-kit/tree/yeoman-generator))<br>
  * ✓ Cross-platform, minimum dependencies<br>
+
+## About the example scene
+
+## Read more
+
+ [blog.blankpace.net](http://blog.blankpace.net/search/label/demoscene)

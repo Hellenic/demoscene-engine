@@ -26,8 +26,7 @@
 Start by cloning this repo and installing project dependencies:
 
 ```
-$ git clone -o babel-starter-kit -b master --single-branch \
-      https://github.com/kriasoft/babel-starter-kit.git MyProject
+$ git clone -o babel-starter-kit -b master --single-branch https://github.com/kriasoft/babel-starter-kit.git MyProject
 $ cd MyProject
 $ npm install
 ```
@@ -63,13 +62,5 @@ $ npm install
  * [@koistya](https://www.codementor.io/koistya) on Codementor
 
 ### Notes and TODOs
- * System.js didn't work out-of-the-box. index.js needed a change on line 2
- ** From require('when/es6-shim/Promise'); to require('when/es6-shim/Promise.browserify-es6');
-
-### Based on
- * Babel Starter Kit | https://github.com/kriasoft/babel-starter-kit
- * Copyright (c) Konstantin Tarkus <hello@tarkus.me> | The MIT License
-
-### License
-
-The MIT License © Konstantin Tarkus ([@koistya](https://twitter.com/koistya))
+ * Refactor and remove jQuery events, they're not good for the architecture
+ * Refactor classes to ES6

@@ -8,8 +8,10 @@ import Progress from './core/Progress';
 * but also every other script it's given. Once the loading is completed, it will initialize
 * the DemoScene system.
 *
-* TODO Finish ES6 transform
-* TODO Use https://babeljs.io/docs/learn-es2015/#module-loaders or some other system to dynamically load modules
+* TODO In the future DemoLoader will be refactored away from jQuery to use ES6 dynamic module loading
+* However, since that standard is not finished I feel like there's no point to do this yet.
+* I could use System.js to load modules and something else, but at least shaders are not supported yet,
+* so I would need jQuery for that still anyways.
 */
 class DemoLoader {
 
@@ -20,6 +22,19 @@ class DemoLoader {
         this.initialsLoaded = false;
 
         this.progress = new Progress();
+
+        /*
+        this.rootPath = rootPath;
+
+        // Set our baseURL reference path
+        System.config({
+            baseURL: rootPath
+        });
+
+        System.import('lib/Detector').then(Detector) {
+            console.log("Detector loaded", Detector);
+        });
+        */
     }
 
     addScripts(scripts, initial, callback)

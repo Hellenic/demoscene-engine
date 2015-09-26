@@ -11,7 +11,7 @@ import DemoScene from '../../src/DemoScene';
 //import DemoScene from '../lib/DemoScene';
 
 // You can give properties in a constructor
-var exampleDemo = new DemoScene({width: 400, height: 300}, '../lib/');
+var exampleDemo = new DemoScene({}, '../lib/');
 
 // Or you can give them via method, they will be merged
 exampleDemo.setProperties({

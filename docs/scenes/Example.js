@@ -4,11 +4,14 @@ DemoService.registerScene(Example);
 
 Example.init = function()
 {
+	// Scene-specific settings
+	this.settings = {width: 400, height: 300};
+
 	this.createScene();
 
 	// Make the controls and add the object (character) to scene
 	// this.camera = new THREE.PerspectiveCamera(80, Statics.SCREEN_WIDTH / Statics.SCREEN_HEIGHT, 1, 1000);
-	this.camera = new THREE.PerspectiveCamera(80, 400 / 300, 1, 1000);
+	this.camera = new THREE.PerspectiveCamera(80, this.settings.width / this.settings.height, 1, 1000);
 
 	//this.controls = new CharacterControls(this.camera, Character.getMesh(), this.scene);
 	//this.scene.add(this.controls.getObject());
@@ -41,9 +44,9 @@ Example.init = function()
 	this.renderer.autoClear = true;
 	this.renderer.sortObjects = false;
 	//this.renderer.setSize(Statics.SCREEN_WIDTH, Statics.SCREEN_HEIGHT);
-	this.renderer.setSize(400, 300);
-	this.renderer.shadowMapEnabled = true;
-	this.renderer.shadowMapType = THREE.PCFSoftShadowMap;
+	this.renderer.setSize(this.settings.width, this.settings.height);
+	this.renderer.shadowMap.enabled = true;
+	this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 	this.start = new Date();
 	this.state++;
@@ -72,6 +75,9 @@ Example.createScene = function()
 
 	this.scene.add(light);
 };
+
+// @Override - by default scene is fullscreen and resizing the browser will resize the scene to fullscreen
+Example.resize = function() {};
 
 // Render loop
 Example.render = function()

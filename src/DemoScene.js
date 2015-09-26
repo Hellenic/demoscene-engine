@@ -1,6 +1,7 @@
 'use strict';
 
 import DemoLoader from './DemoLoader';
+//import Configuration from './core/Configuration';
 
 /**
 * DemoScene system with Three.js
@@ -13,12 +14,6 @@ class DemoScene {
 
     constructor(config, path)
     {
-        this.loader = new DemoLoader();
-
-        this.started = false;
-        this.settings = config;
-        this.applySettings();
-
         // Root path of the DemoSystem
         this.ROOT_PATH = path;
         if (!path)
@@ -26,6 +21,12 @@ class DemoScene {
             var currentPath = document.currentScript.src;
             this.ROOT_PATH = currentPath.substring(0, currentPath.lastIndexOf("/")+1);
         }
+
+        this.loader = new DemoLoader();
+
+        this.started = false;
+        this.settings = config;
+        this.applySettings();
 
         // TODO Refactor
         // Give all the internal engine scripts to the loader
@@ -116,7 +117,6 @@ class DemoScene {
 
     start()
     {
-        $(document).trigger("initialize.DemoSystem");
         this.started = true;
         this.loader.start();
     }
