@@ -35,7 +35,7 @@ browserSync({
           res.setHeader('Content-Type', 'text/css');
           res.end(output);
         } else if (pathname === '/js/main.min.js') {
-          output = await compile.js({debug: true});
+          output = await compile.js({file: 'docs/js/main.js', debug: true});
           res.setHeader('Content-Type', 'application/javascript');
           res.end(output);
         } else {

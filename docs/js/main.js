@@ -25,7 +25,7 @@ exampleDemo.setProperties({
 // DemoScene.enableModule('progress', {config: data});
 
 // Load some generic scripts. Could be custom physics engine, for example.
-exampleDemo.addGenericScript("Triggers", "js/triggers.js", false);
+exampleDemo.addGenericScript("Triggers", "triggers/triggers.js", false);
 
 // Add scene
 exampleDemo.addScene({
