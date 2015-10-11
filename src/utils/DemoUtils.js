@@ -1,5 +1,6 @@
 var DemoUtils = {};
 
+// TODO This is duplicate with LoaderUtils
 DemoUtils.getFilename = function(file)
 {
     var filename = file;

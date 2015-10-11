@@ -146,20 +146,6 @@ class DemoLoader {
         return {name: name, file: file, callback: callback};
     }
 
-    getFilename(file)
-    {
-        var filename = file;
-        if (filename.indexOf("/") >= 0)
-        {
-            filename = filename.substring(filename.lastIndexOf("/")+1);
-        }
-
-        if (filename.indexOf(".") < 0)
-            return filename;
-
-        return filename.substring(0, filename.lastIndexOf("."));
-    }
-
     start()
     {
         // Count scripts

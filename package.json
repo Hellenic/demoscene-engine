@@ -6,7 +6,8 @@
   "author": "Hannu Kärkkäinen <hannu.karkkainen@gmail.com> (http://blankpace.net/HK/)",
   "license": "MIT",
   "main": "lib/DemoScene.js",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "babel": "^5.8.23",
@@ -28,6 +29,7 @@
     "markdown-it": "^4.4.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.2",
+    "mocha-jsdom": "^1.0.0",
     "moment": "^2.10.6",
     "normalize.css": "^3.0.3",
     "postcss": "^5.0.5",
@@ -38,7 +40,7 @@
   },
   "scripts": {
     "lint": "eslint src docs/js tools",
-    "test": "mocha test --compilers js:babel/register",
+    "test": "mocha test --recursive --compilers js:babel/register",
     "build": "babel-node --eval \"require('./tools/build')().catch(err => console.error(err.stack))\"",
     "start": "babel-node tools/start",
     "publish": "build"

@@ -15,12 +15,7 @@ class DemoScene {
     constructor(config, path)
     {
         // Root path of the DemoSystem
-        this.ROOT_PATH = path;
-        if (!path)
-        {
-            var currentPath = document.currentScript.src;
-            this.ROOT_PATH = currentPath.substring(0, currentPath.lastIndexOf("/")+1);
-        }
+        this.setupRootPath(path);
 
         this.loader = new DemoLoader();
 
@@ -54,6 +49,21 @@ class DemoScene {
     /**
         Private methods
     */
+    setupRootPath(path)
+    {
+        this.ROOT_PATH = path;
+        if (!path && document.currentScript)
+        {
+            var currentPath = document.currentScript.src;
+            if (currentPath) {
+                this.ROOT_PATH = currentPath.substring(0, currentPath.lastIndexOf("/")+1);
+            }
+            else {
+                this.ROOT_PATH = '/';
+            }
+        }
+    };
+
     shaderCallback(name, file, content, callback)
     {
         Shaders[name] = content;
@@ -119,6 +129,8 @@ class DemoScene {
     {
         this.started = true;
         this.loader.start();
+
+        return true;
     }
 }
 
