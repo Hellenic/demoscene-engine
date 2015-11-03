@@ -6,12 +6,12 @@ import 'babel/polyfill';
 Example configuration how to use the DemoScene engine
 */
 // For development purposes
-import DemoScene from '../../src/DemoScene';
+//import DemoScene from '../../src/DemoScene';
 // For release
-//import DemoScene from '../lib/DemoScene';
+import DemoScene from '../lib/DemoScene';
 
 // You can give properties in a constructor
-var exampleDemo = new DemoScene({}, '../lib/');
+var exampleDemo = new DemoScene({}, 'lib/');
 
 // Or you can give them via method, they will be merged
 exampleDemo.setProperties({
