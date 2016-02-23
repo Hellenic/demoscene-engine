@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "WebGL Demoscene Engine",
   "repository": "Hellenic/demoscene-engine",
-  "author": "Hannu Kärkkäinen <hannu.karkkainen@gmail.com> (http://blankpace.net/HK/)",
+  "author": "Hannu Kärkkäinen <hannu.karkkainen@gmail.com> (http://karkk.ai//nen/hannu/)",
   "license": "MIT",
   "main": "lib/DemoScene.js",
   "dependencies": {

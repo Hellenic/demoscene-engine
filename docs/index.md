@@ -50,8 +50,8 @@ is more scenes available.
 
 ## Read more
 
-Demo of this project running on [blankpace.net/demoscene-engine/](http://blankpace.net/demoscene-engine/).
-Read more about the engine on my blog, [blog.blankpace.net](http://blog.blankpace.net/search/label/demoscene).
+Demo of this project running on [karkk.ai/demoscene-engine/](http://karkk.ai/demoscene-engine/).
+Read more about the engine on my blog, [blog.karkk.ai](http://blog.karkk.ai/search/label/demoscene).
 
 ### Notes and TODOs
  * Refactor and remove jQuery events, they're not good for the architecture
